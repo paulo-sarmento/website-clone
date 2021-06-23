@@ -1,0 +1,45 @@
+:root {
+    --bottom-nav-bg: #f3f4f4;
+    --bg: #fff;
+    --darker-white: #efefef;
+    --primary-red: #e60012;
+    --grey: #434242;
+}
+
+body {
+    background: var(--bg);
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1180px;
+    max-width: 1180px;
+    min-width: 1160px;
+}
+
+.contaner-estreito {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1089px;
+    max-width: 1089px;
+    min-width: 1069px;
+}
+
+.container-menor {
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+    max-width: 980px;
+    min-width: 960px;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@import url("header.css");
