@@ -288,7 +288,7 @@
 }
 
 .is-active {transform: translateX(0%); transition: transform 300ms; transition-timing-function: ease-out;}
-.bg-active {opacity: 0.8;}
-.open-icon {transform: rotate(180deg);transition: transform 200ms;transition-timing-function: linear;}
-.showNav {opacity: 1;transition: opacity 500ms;transition-timing-function: linear;}
-.showNavExpandidoGames, .showNavExpandidoHardware {max-height: 100vh;transition: .3s;}
+.opacity {opacity: 0.8;}
+.open {transform: rotate(180deg);transition: transform 200ms;transition-timing-function: linear;}
+.show {opacity: 1;transition: opacity 500ms;transition-timing-function: linear;}
+.height-transition {max-height: 100vh;transition: .3s;}
