@@ -8,6 +8,7 @@
     height: 4px;
     background-color: #484848;
     position: absolute;
+    z-index: 2;
 }
 
 .hamburger-icon::before, .hamburger-icon::after {
@@ -81,7 +82,7 @@
     font-size: 0.875rem;
 }
 
-.humburger-btn {
+.hamburger-btn {
     padding: 0.938em;
 }
 
@@ -93,24 +94,207 @@
     height: 24px;
 }
 
-.humburger-btn {
+.hamburger-btn {
     background: none;
     width: 100%;
     height: 100%;
 }
 
-.side-nav {
+/*--------- SEARCH BAR ---------*/
+.search-dialog {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: #fff;
+    transform: translateY(-150%);
+    transition: transform 300ms;
+    transition-timing-function: ease-in;
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 400ms;
+}
+
+.search-input .logo {
+    display: none;
+}
+
+.search-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.input-field {
+    flex: 1;
+    margin-left: 1.75em;
+    display: flex;
+    align-items: center;
     position: relative;
+}
+
+.input-field::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    border-bottom: 1px solid #E60012;
+    width: 100%;
+    bottom: .7em;
+}
+
+.input-field input {
+    flex: 1;
+    height: 55px;
+    font-size: 0.875rem;
+    color: #484848;
+    border: none;
+    outline: none;
+}
+
+
+.input-field i {
+    margin-right: .5em;
+    font-size: 1.125rem;
+    color: #E60012;
+}
+
+.close-search {
+    background: none;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin: 1em 1em 1.25em 1em;
+    padding: 0px;
+}
+
+.close-search svg {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    fill: #727272;
+}
+
+.search-suggestions {
+    padding: 0 0.875em;
+    overflow: scroll;
+    height: 80vh;
+    opacity: 0;
+    transition: opacity 400ms;
+}
+
+.links-rapidos {
+    padding: 0.875em 1.75em;
+}
+
+.suggestions ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: 8em;
+    margin: 1rem 0;
+    line-height: 1.85;
+    color: #E60012;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.suggestions li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.games-tiles {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    width: 146px;
+    width: calc((100% - 1.25em) / 2);
+    background: currentColor;
+    padding: 1.8em 0;
+    border-radius: 5px;
+    border: 1px solid #dadada;
+    text-decoration: none;
+}
+
+.tile-title {
+    display: flex;
+    justify-content: center;
+    padding: 1.8em 0;
+    width: 100%;
+    position: relative;
+    background: #fff;
+}
+
+.tile:nth-child(1) {
+    margin-right: 1.25em;
+    color: #FED400;
+}
+
+.tile:nth-child(2) {
+    color: #00B0EC;
+}
+
+.tile:nth-of-type(3) {
+    width: 100%;
+    margin-top: 1.25em;
+    color: #E60012;
+}
+
+.tile-icon svg {
+    background: #fff;
+    border-radius: 100%;
+    padding: 8px 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid currentColor;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tile-title p {
+    color: #484848;
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/*--------- NAVEGAÇÃO LATERAL ---------*/
+.side-nav {
+    width: 100%;
+    position: fixed;
     z-index: 1;
 }
 
-.background-nav {
-    width: 100vw;
-    height: 100vh;
+.background-nav, 
+.background-search {
     z-index: -1;
+    width: 0%;
+    height: 0vh;
     opacity: 0;
     transition: opacity 200ms ease-in-out;
     background: #000;
+    position: fixed;
+}
+
+.background-search {
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
 }
 
 .side-nav-container {
@@ -122,7 +306,7 @@
     transition-timing-function: ease-in;
     position: absolute;
     right: 0;
-    z-index: 2;
+    z-index: 1;
     overflow-x: hidden;
 }
 
@@ -146,7 +330,6 @@
     margin: .5em 0;
     padding-left: .5em;
     position: relative;
-    z-index: 5;
     max-height: 45px;
 }
 
@@ -209,7 +392,7 @@
 .side-nav-expandido-games,
 .side-nav-expandido-hardware {
     opacity: 0;
-    transition: opacity 50ms;
+    transition: opacity 500ms;
     transition-timing-function: linear;
 }
 
@@ -292,3 +475,5 @@
 .open {transform: rotate(180deg);transition: transform 200ms;transition-timing-function: linear;}
 .show {opacity: 1;transition: opacity 500ms;transition-timing-function: linear;}
 .height-transition {max-height: 100vh;transition: .3s;}
+.active {transform: translateY(0%);transition: transform 300ms;transition-timing-function: ease-out;}
+.show-search {opacity: 1;transition: opacity 400ms;transition-timing-function: linear;transition-delay: 300ms;}
