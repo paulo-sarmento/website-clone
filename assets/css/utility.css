@@ -1,0 +1,59 @@
+.utility {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 74px;
+    color: #484848;
+    border-top: 1px solid #DADADA;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.utility-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: .5em .25em 0 .25em;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.utility-icon svg {
+    height: 20px;
+    width: 100%;
+    fill: #484848;
+}
+
+.utility-link p {
+    font-size: 0.75rem;
+    color: #484848;
+    font-weight: 600;
+}
+
+.utility-search-btn {
+    height: 60px;
+    min-width: 60px;
+    padding: .5em .25em 0 .25em;
+    background: none;
+}
+
+.utility-btn {
+    top: -7px;
+    height: 60px;
+    width: 60px;
+    background: #E60012;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.utility-btn i {
+    font-size: 1.75rem;
+    color: #fff;
+}
