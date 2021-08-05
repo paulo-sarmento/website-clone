@@ -1,0 +1,105 @@
+.details {
+    margin-top: 1em;
+    color: #484848;
+}
+
+.details > div {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding: 0 0.375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details__platform {
+    margin-bottom: 0.875em;
+    font-size: 1rem;
+    font-weight: 300;
+    border-bottom: 2px solid #e60012;
+    padding-bottom: 4px;
+    align-self: flex-start;
+}
+
+.details__title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.details__basic-info h3 {
+    font-size: 1rem;
+    margin-bottom: .5em;
+}
+
+.purchase {
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    margin: 8px 0px;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.purchase__button {
+    background: #e60012;
+    padding: 15px 18px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.purchase__button span {
+    font-size: 1.125rem;
+}
+
+.purchase__button i {
+    font-size: 1.125rem;
+}
+
+.purchase__points {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: inherit;
+    padding-bottom:  16px;
+}
+
+.purchase__points img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: #e60012;;
+}
+
+.actions i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+.teste  {
+    min-width: 100vw;
+    min-height: 100vh;
+}

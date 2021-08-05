@@ -1,0 +1,87 @@
+.gallery {
+    background: #d6f0fa;
+}
+
+.gallery__carousel {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 0;
+    height: 515px;
+}
+
+.carousel-cell {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-cell-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+    padding: 5px;
+    grid-template-areas: 
+    "priority priority"
+    ". ."
+    ". ."
+}
+
+.carousel-img-container {
+    padding-bottom: calc(56.25%);
+    position: relative;
+    border: 1px solid black;
+}
+
+.carousel-img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.priority {
+    grid-area: priority;
+}
+
+.flickity-prev-next-button {
+    display: none;
+}
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    z-index: 1000;
+    display: none;
+}
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox i {
+    position: absolute;
+    color: #e3e3e3;
+    background: rgba(0, 0, 0, .4);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#arrowr {
+    right: 5px;
+}
+
+#arrowl {
+    left: 5px;
+}
+
+#lightbox img {
+    width: 412px;
+    height: 232px;
+}
