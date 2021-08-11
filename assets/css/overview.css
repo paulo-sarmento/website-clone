@@ -1,0 +1,38 @@
+.overview .container {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #484848;
+}
+
+.overview__title {
+    margin-top: 5em;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.overview__paragraph {
+    line-height: 1.5;
+}
+
+.overview__btn {
+    background: #e60012;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    padding: .7em 0;
+    margin-top: 35px;
+}
+
+.overview__btn i {
+    font-size: 1.4rem;
+    margin-left: 11px;
+}

@@ -85,3 +85,21 @@
     width: 412px;
     height: 232px;
 }
+
+.flickity-page-dots {
+    bottom: 25px;
+}
+
+.flickity-page-dots .dot {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    background: #0b2b6b;
+    border: 2px solid transparent;
+    margin: 0 1em;
+
+}
+
+.flickity-page-dots .dot.is-selected {
+    background: #184db9;
+}
